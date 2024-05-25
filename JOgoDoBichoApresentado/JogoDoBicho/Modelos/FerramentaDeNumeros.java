@@ -8,6 +8,8 @@ import JogoDoBicho.Usuario.CarteiraDoUsuario;
 
 public class FerramentaDeNumeros {
 
+
+    //bbbbbbbbbbbbbbbbbbbbbb
     static int milhar;
     static int centena;
     static int dezena;
