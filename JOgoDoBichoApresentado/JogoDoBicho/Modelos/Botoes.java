@@ -31,6 +31,8 @@ public class Botoes {
         return painelInicial();
     }
 
+    static int salvaEstiloDeJogo;
+
     // estilo de jogo
     private static int EstiloDeJogo() {
         Object[] botao = { BotoesTexts.texto3, BotoesTexts.texto3_2, BotoesTexts.texto3_3, BotoesTexts.texto3_4,
@@ -40,7 +42,7 @@ public class Botoes {
                 BotoesTexts.texto3_7, 0, 0,
                 null,
                 botao, botao[0]);
-
+            salvaEstiloDeJogo=classeDeAposta;
         return classeDeAposta;
 
     }
@@ -119,7 +121,9 @@ public class Botoes {
                 BotoesTexts.texto3_7, 0, 0,
                 null,
                 botao, botao[0]);
+
                 salvaNovoJogoFinalizar=escolha;
+                
         return escolha;
 
     }

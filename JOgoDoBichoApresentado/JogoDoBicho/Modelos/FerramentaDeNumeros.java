@@ -35,7 +35,7 @@ public class FerramentaDeNumeros {
 
     public static void main(String[] args) {
 
-        desmembrarNumero(numeroSorteado,"");
+        desmembrarNumero(numeroSorteado, "");
         ValidaEscolhaMilhar(numeroSorteado);
 
     }
@@ -67,15 +67,13 @@ public class FerramentaDeNumeros {
 
             return numeroAleatorioEmMilhar % 100;
 
-        }else if (tipo.equals("unidade")) {
-            
+        } else if (tipo.equals("unidade")) {
+
             return numeroAleatorioEmMilhar % 10;
 
-        }else{
+        } else {
             return 0;
         }
-
-       
 
     }
 
@@ -106,17 +104,18 @@ public class FerramentaDeNumeros {
         if (Botoes.salvaNovoJogoFinalizar == 2)// Aqui é utilizado o valor dos botões para autorizar a ação
         {
             System.out.println("Acessou o painel NovoJogo Finalizar");
-            // se o numero apostado for igual ao numero desmebrado
+
+            // // se o numero apostado for igual ao numero desmebrado
             if (numeroApostadoMilhar == numeroDesmembradoMilhar) {
-                JOptionPane.showMessageDialog(null, FerramentaDeNumerosTexts.texto1_3
-                        + numeroAleatorioEmMilhar);
-                System.out.println("Numero que o usuario digitou: " + numeroApostadoMilhar);
+            JOptionPane.showMessageDialog(null, FerramentaDeNumerosTexts.texto1_3
+            + numeroAleatorioEmMilhar);
+            System.out.println("Numero que o usuario digitou: " + numeroApostadoMilhar);
 
             } else {
-                // Caso o numero sorteado em milhar esteja errado
-                JOptionPane.showMessageDialog(null, FerramentaDeNumerosTexts.texto1_4
-                        + numeroAleatorioEmMilhar);
-                System.out.println("Numero que o usuario digitou: " + numeroApostadoMilhar);
+            // Caso o numero sorteado em milhar esteja errado
+            JOptionPane.showMessageDialog(null, FerramentaDeNumerosTexts.texto1_4
+            + numeroAleatorioEmMilhar);
+            System.out.println("Numero que o usuario digitou: " + numeroApostadoMilhar);
             }
             PremiaMilhar(numeroAleatorioEmMilhar);
         }
@@ -182,6 +181,7 @@ public class FerramentaDeNumeros {
         if (Botoes.salvaNovoJogoFinalizar == 2) // Aqui é utilizado o valor dos botões para autorizar a ação
         {
             System.out.println("Acessou o painel NovoJogo Finalizar");
+
             // se o numero apostado for igual ao numero desmebrado
             if (numeroApostadoCentena == numeroDesmembradoCentena) {
                 JOptionPane.showMessageDialog(null,
@@ -194,10 +194,11 @@ public class FerramentaDeNumeros {
                 // Caso o numero sorteado em centena esteja errado
                 JOptionPane.showMessageDialog(null,
                         FerramentaDeNumerosTexts.texto2_4 + numeroAleatorioEmMilhar % 1000);
-                        
+
                 // Menssage que errou
                 System.out.println("Numero que o usuario digitou: " + numeroApostadoCentena);
             }
+
             PremiaCentena(numeroAleatorioEmMilhar);
         }
 
@@ -314,7 +315,8 @@ public class FerramentaDeNumeros {
     public static void resultadoDeTodosOsJogos(int numeroAleatorioEmMilhar) {
 
         JOptionPane.showMessageDialog(null,
-                FerramentaDeNumerosTexts.texto3_5 + numeroAleatorioEmMilhar + FerramentaDeNumerosTexts.texto3_5_6 + numeroAleatorioEmMilhar % 1000
+                FerramentaDeNumerosTexts.texto3_5 + numeroAleatorioEmMilhar + FerramentaDeNumerosTexts.texto3_5_6
+                        + numeroAleatorioEmMilhar % 1000
                         + FerramentaDeNumerosTexts.texto3_5_6_7 + numeroAleatorioEmMilhar % 100);
 
     }
@@ -361,6 +363,93 @@ public class FerramentaDeNumeros {
                 JOptionPane.showMessageDialog(null, "Opção inválida!");
                 break;
         }
+
+    }
+
+    static String resultadoPreco;
+
+    public static String TelaDeResultadosPreco(String preco) {
+
+        if (Botoes.salvaValor == 0) {
+            return preco = "Valor do jogo: R$ 10,00 ";
+        } else if (Botoes.salvaValor == 1) {
+            return preco = "Valor do jogo: R$ 20,00 ";
+        } else if (Botoes.salvaValor == 2) {
+            return preco = "Valor do jogo: R$ 30,00 ";
+        } else if (Botoes.salvaValor == 3) {
+            return preco = "Valor do jogo: R$ 40,00 ";
+        }
+
+        resultadoPreco = preco;
+        return preco;
+
+    }
+
+    static String resultadoBingo;
+
+    public static String TelaDeResultadosPremio(String bingo, String preco) {
+
+        if (Botoes.salvaEstiloDeJogo == 0) {
+            if (preco.equals("Valor do jogo: R$ 10,00 ")) {
+                return " R$ 20";
+            } else if (preco.equals("Valor do jogo: R$ 20,00 ")) {
+                return " R$ 40";
+            } else if (preco.equals("Valor do jogo: R$ 30,00 ")) {
+                return " R$ 60";
+            } else if (preco.equals("Valor do jogo: R$ 40,00 ")) {
+                return "R$ 80";
+            }
+        } else if (Botoes.salvaEstiloDeJogo == 1) {
+            if (preco.equals("Valor do jogo: R$ 10,00 ")) {
+                return " R$ 10.000";
+            } else if (preco.equals("Valor do jogo: R$ 20,00 ")) {
+                return " R$ 20.000";
+            } else if (preco.equals("Valor do jogo: R$ 30,00 ")) {
+                return " R$ 30.000";
+            } else if (preco.equals("Valor do jogo: R$ 40,00 ")) {
+                return "R$ 40.000";
+            }
+        } else if (Botoes.salvaEstiloDeJogo == 2) {
+            if (preco.equals("Valor do jogo: R$ 10,00 ")) {
+                return " R$ 1.000";
+            } else if (preco.equals("Valor do jogo: R$ 20,00 ")) {
+                return " R$ 2.000";
+            } else if (preco.equals("Valor do jogo: R$ 30,00 ")) {
+                return " R$ 3.000";
+            } else if (preco.equals("Valor do jogo: R$ 40,00 ")) {
+                return "R$ 4.000";
+            }
+        } else if (Botoes.salvaEstiloDeJogo == 3) {
+            if (preco.equals("Valor do jogo: R$ 10,00 ")) {
+                return " R$ 100";
+            } else if (preco.equals("Valor do jogo: R$ 20,00 ")) {
+                return " R$ 200";
+            } else if (preco.equals("Valor do jogo: R$ 30,00 ")) {
+                return " R$ 300";
+            } else if (preco.equals("Valor do jogo: R$ 40,00 ")) {
+                return "R$ 400";
+            }
+        }
+        resultadoBingo = bingo;
+        return bingo;
+    }
+
+    static String resultadoGame;
+
+    public static String TelaDeResultadosGame(String preco, String bingo, String game) {
+
+        if (Botoes.salvaEstiloDeJogo == 0) {
+            return "Aposta: Animal";
+        } else if (Botoes.salvaEstiloDeJogo == 1) {
+            return "Aposta: Milhar";
+        } else if (Botoes.salvaEstiloDeJogo == 2) {
+            return "Aposta: Centena";
+        } else if (Botoes.salvaEstiloDeJogo == 3) {
+            return "Aposta: Dezena";
+        }
+
+        resultadoGame = game;
+        return game;
 
     }
 
