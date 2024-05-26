@@ -3,14 +3,22 @@ package JogoDoBicho.Modelos;
 public class CarrinhoDeAposta {
 
     int numeroInseridoPeloUsuario;
-
     int numeroGeradoAleatorio;
-
-    String valorPagoPeloUsuario;
-
+    int valorPagoPeloUsuario;
     int premioPelaAposta;
-
     String modalidadeDeJogo;
+
+    // Contrutor
+
+    public CarrinhoDeAposta(int _numeroInseridoPeloUsuario, String _modalidadeDeJogo, int _valorPagoPeloUsuario) {
+        
+        this.modalidadeDeJogo = _modalidadeDeJogo;
+
+        this.numeroInseridoPeloUsuario = _numeroInseridoPeloUsuario;
+
+        this.valorPagoPeloUsuario = _valorPagoPeloUsuario;
+
+    }
 
     public String getModalidadeDeJogo() {
         return modalidadeDeJogo;
@@ -36,11 +44,11 @@ public class CarrinhoDeAposta {
         this.numeroGeradoAleatorio = numeroSorteado;
     }
 
-    public String getValorPagoPeloUsuario() {
+    public int getValorPagoPeloUsuario() {
         return valorPagoPeloUsuario;
     }
 
-    public void setValorPagoPeloUsuario(String valorPagoPeloUsuario) {
+    public void setValorPagoPeloUsuario(int valorPagoPeloUsuario) {
         this.valorPagoPeloUsuario = valorPagoPeloUsuario;
     }
 
@@ -55,8 +63,10 @@ public class CarrinhoDeAposta {
     @Override
     public String toString() {
 
-        return "Estilo de Jogo: " + this.getModalidadeDeJogo() + "Numero apostado: "
-                + this.getNumeroInseridoPeloUsuario() + "Valor pago na aposta: " + this.getValorPagoPeloUsuario();
+        return "\n\nOque o usuario escolheu:  " + "    Estilo de Jogo: " + this.getModalidadeDeJogo()
+                + "  Numero apostado: "
+                + this.getNumeroInseridoPeloUsuario() + "  Valor pago na aposta: " + this.getValorPagoPeloUsuario()
+                + "\n\n" + "Resultados: \n" + "\nNumero gerado aleatoromente: " + this.getNumeroGeradoAleatorio();
     }
 
 }

@@ -11,6 +11,9 @@ import JogoDoBicho.Modelos.Menu;
 public class Principal {
     public static void main(String[] args) {
 
+ System.out.println("Acessou o Principal\n");
+
+
         Botoes novoBotao = new Botoes();
 
         int primeiroPainel = novoBotao.getPalnelInicial();
@@ -27,20 +30,7 @@ public class Principal {
                 break;
         }
 
-
-
-        var novoCarroDeAposta = new CarrinhoDeAposta();
-        novoCarroDeAposta.setNumeroGeradoAleatorio(FerramentaDeNumeros.numeroSorteado);
-        novoCarroDeAposta.setNumeroInseridoPeloUsuario(FerramentaDeNumeros.numeroApostadoMilhar);
-        novoCarroDeAposta.setValorPagoPeloUsuario(FerramentaDeNumeros.resultadoPreco);
-
-        System.out.println("acessou o main");
-
-        ArrayList<CarrinhoDeAposta> listaDeApostas = new ArrayList<>();
-        listaDeApostas.add(novoCarroDeAposta);
-        System.out.println("testando array: " + listaDeApostas.get(0).toString());
-        System.out.println(listaDeApostas.size());
-
+       
     }
 
 }

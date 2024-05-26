@@ -1,5 +1,7 @@
 package JogoDoBicho.Modelos;
 
+import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
 import JogoDoBicho.Library.ExecutarTexts;
 import JogoDoBicho.Usuario.CarteiraDoUsuario;
@@ -7,6 +9,8 @@ import JogoDoBicho.Usuario.CarteiraDoUsuario;
 public class Execucao {
 
     public static int motor() {
+
+        ArrayList<CarrinhoDeAposta> listaDeApostas = new ArrayList<>();
 
         Botoes novoBotao = new Botoes();
 
@@ -62,6 +66,7 @@ public class Execucao {
                                         """);
                     // Leva até o metodo que faz a cobrança para jogar
                     FerramentaDeNumeros.valorDosJogos();
+
 
                     // Leva até metodo que valida a escolha em milhar
                     FerramentaDeNumeros.ValidaEscolhaMilhar(FerramentaDeNumeros.numeroAleatorioEmMilhar());
@@ -125,6 +130,9 @@ public class Execucao {
 
                 default:
             }
+
+            CarrinhoDeAposta novaAposta = new CarrinhoDeAposta(FerramentaDeNumeros.numeroDoUsuario,FerramentaDeNumeros.tipoDeJogo, FerramentaDeNumeros.precoTickt);
+            listaDeApostas.add(novaAposta);
         }
 
     }
