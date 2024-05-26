@@ -55,15 +55,6 @@ public class FerramentaDeNumeros {
      */
     public static int desmembrarNumero(int numeroAleatorioEmMilhar, String tipo) {
 
-        // milhar = numeroAleatorioEmMilhar;
-        // centena = (numeroAleatorioEmMilhar % 1000);
-        // dezena = (numeroAleatorioEmMilhar % 100);
-        // unidade = numeroAleatorioEmMilhar % 10;
-
-
-        // centena = centena * 100 + dezena * 10 + unidade;
-        // dezena = dezena * 10 + unidade;
-
         if (tipo.equals("milhar")) {
 
             return numeroAleatorioEmMilhar;
@@ -112,7 +103,7 @@ public class FerramentaDeNumeros {
 
         Botoes.NovoJogoFinalizar();// Aqui é chamado o Painel onde aparece os botões
 
-        if (Botoes.salvaNovoJogoFinalizar == 1)// Aqui é utilizado o valor dos botões para autorizar a ação
+        if (Botoes.salvaNovoJogoFinalizar == 2)// Aqui é utilizado o valor dos botões para autorizar a ação
         {
             System.out.println("Acessou o painel NovoJogo Finalizar");
             // se o numero apostado for igual ao numero desmebrado
@@ -188,7 +179,7 @@ public class FerramentaDeNumeros {
 
         Botoes.NovoJogoFinalizar();// Aqui é chamado o Painel onde aparece os botões
 
-        if (Botoes.salvaNovoJogoFinalizar == 1) // Aqui é utilizado o valor dos botões para autorizar a ação
+        if (Botoes.salvaNovoJogoFinalizar == 2) // Aqui é utilizado o valor dos botões para autorizar a ação
         {
             System.out.println("Acessou o painel NovoJogo Finalizar");
             // se o numero apostado for igual ao numero desmebrado
@@ -269,7 +260,7 @@ public class FerramentaDeNumeros {
 
         Botoes.NovoJogoFinalizar();// Aqui é chamado o Painel onde aparece os botões
 
-        if (Botoes.salvaNovoJogoFinalizar == 1)// Aqui é utilizado o valor dos botões para autorizar a ação
+        if (Botoes.salvaNovoJogoFinalizar == 2)// Aqui é utilizado o valor dos botões para autorizar a ação
         {
             System.out.println("Acessou o painel NovoJogo Finalizar");
             // se o numero apostado for igual ao numero desmebrado

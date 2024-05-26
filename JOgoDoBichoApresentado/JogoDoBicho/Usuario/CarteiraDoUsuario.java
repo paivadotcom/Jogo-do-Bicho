@@ -1,14 +1,12 @@
 package JogoDoBicho.Usuario;
 
-
-import JogoDoBicho.Modelos.FerramentaDeNumeros;
 import JogoDoBicho.Modelos.Menu;
 
 public class CarteiraDoUsuario {
 
-    private static int carteira = 0;
-    private int valorDoTicket=0;
-    
+    private static int carteira = 100;
+    private int valorDoTicket = 0;
+
     public int getValorDoTicket() {
         return valorDoTicket;
     }
@@ -28,41 +26,34 @@ public class CarteiraDoUsuario {
     // Cobra o usuario
     public int debitarDaCarteira(int getCarteira, int getValorDoTicket) {
 
-        
-           carteira -= getValorDoTicket;
+        carteira -= getValorDoTicket;
 
-        System.out.println("Saldo atual: "+carteira);
+        System.out.println("Saldo atual: " + carteira);
 
-
-        
         return carteira;
 
     }
 
     // paga o usuario
-   public int depositarPremioNaCarteira(int premio){
+    public int depositarPremioNaCarteira(int premio) {
 
         carteira += premio;
 
-        System.out.println(carteira);
+        System.out.println("Saldo depois do premio: " + carteira);
 
         return 0;
-    } 
-
-
-
-
-    // usuario realiza deposito
-    public void alterarSaldo(int valor){
-        carteira =+ valor;
-        System.out.println("Saldo atual: "+ carteira);
     }
 
-    public void depositarSaldoNaConta (){
-        
+    // usuario realiza deposito
+    public void alterarSaldo(int valor) {
+        carteira = +valor;
+        System.out.println("Saldo atual: " + carteira);
+    }
+
+    public void depositarSaldoNaConta() {
+
         int valorDepositado = Menu.depositar(carteira); // passa o saldo atual da carteira
         alterarSaldo(valorDepositado);
     }
 
-    
 }

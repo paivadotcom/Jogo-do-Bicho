@@ -113,7 +113,7 @@ public class Botoes {
 
      // NovoJogo Finalizar
      public static int NovoJogoFinalizar() {
-        Object[] botao = {"Novo Jogo" ,"Finalizar"};
+        Object[] botao = {"Novo Jogo", "Ver Jogos" ,"Finalizar"};
 
         int escolha = JOptionPane.showOptionDialog(null, "Desejar Finalizar e ver o resultado da aposta ou adicionar mais uma aposta?",
                 BotoesTexts.texto3_7, 0, 0,
