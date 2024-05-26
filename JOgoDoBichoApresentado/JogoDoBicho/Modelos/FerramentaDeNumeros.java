@@ -1,7 +1,11 @@
 package JogoDoBicho.Modelos;
 
+import java.util.ArrayList;
+
 // import java.util.Random;
 import javax.swing.JOptionPane;
+
+import com.sun.tools.javac.Main;
 
 import JogoDoBicho.Library.FerramentaDeNumerosTexts;
 import JogoDoBicho.Usuario.CarteiraDoUsuario;
@@ -12,14 +16,14 @@ public class FerramentaDeNumeros {
     static int centena;
     static int dezena;
     static int unidade;
-    static int numeroSorteado = numeroAleatorioEmMilhar();
+    public static int numeroSorteado = numeroAleatorioEmMilhar();
     static int premio;
 
     // Essa variavel é utulizada em todos os Metodos
     private static boolean entradaValida = false;
 
     // Variaveis utilidas nos Metodos ValidaEscolhaMilhar e PremiaMilhar
-    static int numeroApostadoMilhar = 0;
+    public static int numeroApostadoMilhar = 0;
     static int numeroDesmembradoMilhar = 0;
 
     // Variaveis utilidas nos Metodos ValidaEscolhaCentena e PremiaCentena
@@ -37,6 +41,8 @@ public class FerramentaDeNumeros {
 
         desmembrarNumero(numeroSorteado, "");
         ValidaEscolhaMilhar(numeroSorteado);
+
+       
 
     }
 
@@ -107,15 +113,16 @@ public class FerramentaDeNumeros {
 
             // // se o numero apostado for igual ao numero desmebrado
             if (numeroApostadoMilhar == numeroDesmembradoMilhar) {
-            JOptionPane.showMessageDialog(null, FerramentaDeNumerosTexts.texto1_3
-            + numeroAleatorioEmMilhar);
-            System.out.println("Numero que o usuario digitou: " + numeroApostadoMilhar);
+                JOptionPane.showMessageDialog(null, FerramentaDeNumerosTexts.texto1_3
+                        + numeroAleatorioEmMilhar);
+                System.out.println("Numero que o usuario digitou: " + numeroApostadoMilhar);
 
+               
             } else {
-            // Caso o numero sorteado em milhar esteja errado
-            JOptionPane.showMessageDialog(null, FerramentaDeNumerosTexts.texto1_4
-            + numeroAleatorioEmMilhar);
-            System.out.println("Numero que o usuario digitou: " + numeroApostadoMilhar);
+                // Caso o numero sorteado em milhar esteja errado
+                JOptionPane.showMessageDialog(null, FerramentaDeNumerosTexts.texto1_4
+                        + numeroAleatorioEmMilhar);
+                System.out.println("Numero que o usuario digitou: " + numeroApostadoMilhar);
             }
             PremiaMilhar(numeroAleatorioEmMilhar);
         }
@@ -366,7 +373,7 @@ public class FerramentaDeNumeros {
 
     }
 
-    static String resultadoPreco;
+    public static String resultadoPreco;
 
     public static String TelaDeResultadosPreco(String preco) {
 
@@ -385,72 +392,73 @@ public class FerramentaDeNumeros {
 
     }
 
-    static String resultadoBingo;
+    // static String resultadoBingo;
 
-    public static String TelaDeResultadosPremio(String bingo, String preco) {
+    // public static String TelaDeResultadosPremio(String bingo, String preco) {
 
-        if (Botoes.salvaEstiloDeJogo == 0) {
-            if (preco.equals("Valor do jogo: R$ 10,00 ")) {
-                return " R$ 20";
-            } else if (preco.equals("Valor do jogo: R$ 20,00 ")) {
-                return " R$ 40";
-            } else if (preco.equals("Valor do jogo: R$ 30,00 ")) {
-                return " R$ 60";
-            } else if (preco.equals("Valor do jogo: R$ 40,00 ")) {
-                return "R$ 80";
-            }
-        } else if (Botoes.salvaEstiloDeJogo == 1) {
-            if (preco.equals("Valor do jogo: R$ 10,00 ")) {
-                return " R$ 10.000";
-            } else if (preco.equals("Valor do jogo: R$ 20,00 ")) {
-                return " R$ 20.000";
-            } else if (preco.equals("Valor do jogo: R$ 30,00 ")) {
-                return " R$ 30.000";
-            } else if (preco.equals("Valor do jogo: R$ 40,00 ")) {
-                return "R$ 40.000";
-            }
-        } else if (Botoes.salvaEstiloDeJogo == 2) {
-            if (preco.equals("Valor do jogo: R$ 10,00 ")) {
-                return " R$ 1.000";
-            } else if (preco.equals("Valor do jogo: R$ 20,00 ")) {
-                return " R$ 2.000";
-            } else if (preco.equals("Valor do jogo: R$ 30,00 ")) {
-                return " R$ 3.000";
-            } else if (preco.equals("Valor do jogo: R$ 40,00 ")) {
-                return "R$ 4.000";
-            }
-        } else if (Botoes.salvaEstiloDeJogo == 3) {
-            if (preco.equals("Valor do jogo: R$ 10,00 ")) {
-                return " R$ 100";
-            } else if (preco.equals("Valor do jogo: R$ 20,00 ")) {
-                return " R$ 200";
-            } else if (preco.equals("Valor do jogo: R$ 30,00 ")) {
-                return " R$ 300";
-            } else if (preco.equals("Valor do jogo: R$ 40,00 ")) {
-                return "R$ 400";
-            }
-        }
-        resultadoBingo = bingo;
-        return bingo;
-    }
+    // if (Botoes.salvaEstiloDeJogo == 0) {
+    // if (preco.equals("Valor do jogo: R$ 10,00 ")) {
+    // return " R$ 20";
+    // } else if (preco.equals("Valor do jogo: R$ 20,00 ")) {
+    // return " R$ 40";
+    // } else if (preco.equals("Valor do jogo: R$ 30,00 ")) {
+    // return " R$ 60";
+    // } else if (preco.equals("Valor do jogo: R$ 40,00 ")) {
+    // return "R$ 80";
+    // }
+    // } else if (Botoes.salvaEstiloDeJogo == 1) {
+    // if (preco.equals("Valor do jogo: R$ 10,00 ")) {
+    // return " R$ 10.000";
+    // } else if (preco.equals("Valor do jogo: R$ 20,00 ")) {
+    // return " R$ 20.000";
+    // } else if (preco.equals("Valor do jogo: R$ 30,00 ")) {
+    // return " R$ 30.000";
+    // } else if (preco.equals("Valor do jogo: R$ 40,00 ")) {
+    // return "R$ 40.000";
+    // }
+    // } else if (Botoes.salvaEstiloDeJogo == 2) {
+    // if (preco.equals("Valor do jogo: R$ 10,00 ")) {
+    // return " R$ 1.000";
+    // } else if (preco.equals("Valor do jogo: R$ 20,00 ")) {
+    // return " R$ 2.000";
+    // } else if (preco.equals("Valor do jogo: R$ 30,00 ")) {
+    // return " R$ 3.000";
+    // } else if (preco.equals("Valor do jogo: R$ 40,00 ")) {
+    // return "R$ 4.000";
+    // }
+    // } else if (Botoes.salvaEstiloDeJogo == 3) {
+    // if (preco.equals("Valor do jogo: R$ 10,00 ")) {
+    // return " R$ 100";
+    // } else if (preco.equals("Valor do jogo: R$ 20,00 ")) {
+    // return " R$ 200";
+    // } else if (preco.equals("Valor do jogo: R$ 30,00 ")) {
+    // return " R$ 300";
+    // } else if (preco.equals("Valor do jogo: R$ 40,00 ")) {
+    // return "R$ 400";
+    // }
+    // }
+    // resultadoBingo = bingo;
+    // return bingo;
+    // }
 
-    static String resultadoGame;
+    // static String resultadoGame;
 
-    public static String TelaDeResultadosGame(String preco, String bingo, String game) {
+    // public static String TelaDeResultadosGame(String preco, String bingo, String
+    // game) {
 
-        if (Botoes.salvaEstiloDeJogo == 0) {
-            return "Aposta: Animal";
-        } else if (Botoes.salvaEstiloDeJogo == 1) {
-            return "Aposta: Milhar";
-        } else if (Botoes.salvaEstiloDeJogo == 2) {
-            return "Aposta: Centena";
-        } else if (Botoes.salvaEstiloDeJogo == 3) {
-            return "Aposta: Dezena";
-        }
+    // if (Botoes.salvaEstiloDeJogo == 0) {
+    // return "Aposta: Animal";
+    // } else if (Botoes.salvaEstiloDeJogo == 1) {
+    // return "Aposta: Milhar";
+    // } else if (Botoes.salvaEstiloDeJogo == 2) {
+    // return "Aposta: Centena";
+    // } else if (Botoes.salvaEstiloDeJogo == 3) {
+    // return "Aposta: Dezena";
+    // }
 
-        resultadoGame = game;
-        return game;
+    // resultadoGame = game;
+    // return game;
 
-    }
+    // }
 
 }

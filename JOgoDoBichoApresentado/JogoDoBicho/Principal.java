@@ -1,7 +1,11 @@
 package JogoDoBicho;
 
+import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
 import JogoDoBicho.Modelos.Botoes;
+import JogoDoBicho.Modelos.CarrinhoDeAposta;
+import JogoDoBicho.Modelos.FerramentaDeNumeros;
 import JogoDoBicho.Modelos.Menu;
 
 public class Principal {
@@ -23,6 +27,51 @@ public class Principal {
                 break;
         }
 
+
+
+        var novoCarroDeAposta = new CarrinhoDeAposta();
+        novoCarroDeAposta.setNumeroGeradoAleatorio(FerramentaDeNumeros.numeroSorteado);
+        novoCarroDeAposta.setNumeroInseridoPeloUsuario(FerramentaDeNumeros.numeroApostadoMilhar);
+        novoCarroDeAposta.setValorPagoPeloUsuario(FerramentaDeNumeros.resultadoPreco);
+
+        System.out.println("acessou o main");
+
+        ArrayList<CarrinhoDeAposta> listaDeApostas = new ArrayList<>();
+        listaDeApostas.add(novoCarroDeAposta);
+        System.out.println("testando array: " + listaDeApostas.get(0).toString());
+        System.out.println(listaDeApostas.size());
+
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  
+
+
+
+
+
+
+
+
+
+
+
+
