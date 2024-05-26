@@ -1,14 +1,12 @@
-package JogoDoBicho.Modelos;
+package Modelos;
 
 import java.util.ArrayList;
 
 // import java.util.Random;
 import javax.swing.JOptionPane;
 
-
-
-import JogoDoBicho.Library.FerramentaDeNumerosTexts;
-import JogoDoBicho.Usuario.CarteiraDoUsuario;
+import Library.FerramentaDeNumerosTexts;
+import Usuario.CarteiraDoUsuario;
 
 public class FerramentaDeNumeros {
 

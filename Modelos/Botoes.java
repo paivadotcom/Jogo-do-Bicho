@@ -1,9 +1,9 @@
-package JogoDoBicho.Modelos;
+package Modelos;
 
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
-import JogoDoBicho.Library.BotoesTexts;
+import Library.BotoesTexts;
 
 public class Botoes {
 

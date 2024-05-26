@@ -1,4 +1,4 @@
-package JogoDoBicho.Library;
+package Library;
 
 public class FerramentaDeNumerosTexts {
     // Valida escolha Milhar

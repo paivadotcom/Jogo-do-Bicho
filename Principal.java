@@ -1,12 +1,12 @@
-package JogoDoBicho;
 
-import java.util.ArrayList;
+
+
 
 import javax.swing.JOptionPane;
-import JogoDoBicho.Modelos.Botoes;
-import JogoDoBicho.Modelos.CarrinhoDeAposta;
-import JogoDoBicho.Modelos.FerramentaDeNumeros;
-import JogoDoBicho.Modelos.Menu;
+
+import Modelos.Botoes;
+
+import Modelos.Menu;
 
 public class Principal {
     public static void main(String[] args) {

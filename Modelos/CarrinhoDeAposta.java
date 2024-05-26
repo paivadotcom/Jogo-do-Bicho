@@ -1,4 +1,4 @@
-package JogoDoBicho.Modelos;
+package Modelos;
 
 public class CarrinhoDeAposta {
 

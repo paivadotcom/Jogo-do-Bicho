@@ -1,6 +1,7 @@
-package JogoDoBicho.Usuario;
+package Usuario;
 
-import JogoDoBicho.Modelos.Menu;
+
+import Modelos.Menu;
 
 public class CarteiraDoUsuario {
 

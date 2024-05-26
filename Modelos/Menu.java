@@ -1,9 +1,8 @@
-package JogoDoBicho.Modelos;
+package Modelos;
 
 import javax.swing.JOptionPane;
 
-
-import JogoDoBicho.Usuario.CarteiraDoUsuario;
+import Usuario.CarteiraDoUsuario;
 
 public class Menu {
     public static void main(String[] args) {
